@@ -28,4 +28,8 @@ export const API_ENDPOINTS = {
     PROFILE: '/business/profile',
     UPDATE: '/business/update',
   },
+  LITERACY:{
+    CONTENT: '/literacy/content',
+    BOT: '/literacy/bot_interaction',
+  }
 };

@@ -6,6 +6,7 @@ import LoginPage from '@/pages/login';
 import RegisterPage from '@/pages/register';
 import OnboardingPage from '@/pages/onboarding';
 import DashboardPage from '@/pages/dashboard';
+import FinacialLiteracy from './pages/finacial_literacy';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -43,6 +44,14 @@ export default function App() {
                   <DashboardPage />
                 </ProtectedRoute>
               }
+            />
+            <Route 
+            path='/literacy'
+            element={
+              <ProtectedRoute>
+                <FinacialLiteracy/>
+              </ProtectedRoute>
+            }
             />
             
             {/* Default Route */}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Market Outlook 2024: Navigating Economic Uncertainty",
+    "summary": "Expert analysis on inflation trends, interest rate projections, and strategic investment approaches for the coming year.",
+    "thumbnail": "https://res.cloudinary.com/drselhsl4/image/upload/v1763637243/bossika/hqw2xtweysveqvvwsfqt.jpg",
+    "category": "Market Analysis",
+    "readTime": "5 min read",
+    "date": "Dec 15, 2023",
+    "link": "/articles/market-outlook-2024"
+  },
+  {
+    "id": 2,
+    "title": "The Rise of Sustainable Investing: ESG Fundamentals",
+    "summary": "Understanding how environmental, social, and governance factors are reshaping investment portfolios and creating new opportunities.",
+    "thumbnail": "https://res.cloudinary.com/drselhsl4/image/upload/v1763637241/bossika/pz6rcvkwlpbh0q1nh1ml.jpg",
+    "category": "Sustainable Finance",
+    "readTime": "4 min read",
+    "date": "Dec 12, 2023",
+    "link": "/articles/esg-investing"
+  },
+  {
+    "id": 3,
+    "title": "Retirement Planning in a Volatile Market",
+    "summary": "Strategies to protect your retirement savings and generate stable income despite market fluctuations and economic headwinds.",
+    "thumbnail": "https://res.cloudinary.com/drselhsl4/image/upload/v1763637241/bossika/revvg10hrwyyqebohwgz.jpg",
+    "category": "Retirement",
+    "readTime": "6 min read",
+    "date": "Dec 10, 2023",
+    "link": "/articles/retirement-planning"
+  }
+]

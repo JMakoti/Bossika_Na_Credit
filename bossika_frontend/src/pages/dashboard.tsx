@@ -1,10 +1,11 @@
-import { useAuth } from '@/contexts/AuthContext';
-import { Button } from '@/components/ui/button';
-import QuickStatsGrid from '@/components/dashboard/QuickStatsGrid';
-import CashFlowCard from '@/components/dashboard/CashFlowCard';
-import BusinessHealthCard from '@/components/dashboard/BusinessHealthCard';
-import RecommendationsCard from '@/components/dashboard/RecommendationsCard';
-import { LogOut, Settings } from 'lucide-react';
+import { useAuth } from "@/contexts/AuthContext";
+import { Button } from "@/components/ui/button";
+import QuickStatsGrid from "@/components/dashboard/QuickStatsGrid";
+import CashFlowCard from "@/components/dashboard/CashFlowCard";
+import BusinessHealthCard from "@/components/dashboard/BusinessHealthCard";
+import RecommendationsCard from "@/components/dashboard/RecommendationsCard";
+import { LogOut, Settings } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function DashboardPage() {
   const { user, logout } = useAuth();
@@ -13,35 +14,64 @@ export default function DashboardPage() {
     try {
       await logout();
     } catch (error) {
-      console.error('Logout failed:', error);
+      console.error("Logout failed:", error);
     }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header */}
-      <header className="bg-white border-b shadow-sm">
+      <header className="bg-white border-b shadow-sm h-24 p-3">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
           <div className="flex items-center justify-between py-3 sm:h-16">
             <div className="flex-1 min-w-0">
-              <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 truncate">Bossika Na Credit</h1>
+              <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 truncate">
+                Bossika Na Credit
+              </h1>
               <p className="text-xs sm:text-sm text-gray-600 truncate">
-                Welcome back, <span className="font-semibold text-blue-600">{user?.name || 'User'}</span>
+                Welcome back,{" "}
+                <span className="font-semibold text-blue-600">
+                  {user?.name || "User"}
+                </span>
               </p>
             </div>
             <div className="flex items-center gap-1 sm:gap-2 ml-2">
-              <Button variant="outline" size="sm" className="text-gray-700 hover:text-gray-900 hover:bg-gray-100 hidden sm:flex">
+              <Link
+                to="/literacy"
+                className="text-sm font-medium text-gray-700 hover:text-gray-900 hover:underline hidden sm:inline px-3"
+              >
+                Finacial Literacy
+              </Link>
+              <Button
+                variant="outline"
+                size="sm"
+                className="text-gray-700 hover:text-white-900 hidden sm:flex"
+              >
                 <Settings className="h-4 w-4 sm:mr-2" />
                 <span className="hidden sm:inline">Settings</span>
               </Button>
-              <Button variant="outline" size="sm" className="sm:hidden text-gray-700">
+              <Button
+                variant="outline"
+                size="sm"
+                className="sm:hidden text-gray-700"
+              >
                 <Settings className="h-4 w-4" />
               </Button>
-              <Button variant="outline" size="sm" onClick={handleLogout} className="text-red-600 hover:text-red-700 hover:bg-red-50 border-red-200 hidden sm:flex">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={handleLogout}
+                className="text-red-600 hover:text-red-700 hover:bg-red-50 border-red-200 hidden sm:flex"
+              >
                 <LogOut className="h-4 w-4 sm:mr-2" />
                 <span className="hidden sm:inline">Logout</span>
               </Button>
-              <Button variant="outline" size="sm" onClick={handleLogout} className="sm:hidden text-red-600 border-red-200">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={handleLogout}
+                className="sm:hidden text-red-600 border-red-200"
+              >
                 <LogOut className="h-4 w-4" />
               </Button>
             </div>
@@ -54,7 +84,9 @@ export default function DashboardPage() {
         <div className="space-y-4 sm:space-y-6 md:space-y-8">
           {/* Welcome Section */}
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 text-white shadow-lg">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">Dashboard</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">
+              Dashboard
+            </h2>
             <p className="text-blue-100 text-sm sm:text-base md:text-lg">
               Monitor your business performance and get insights
             </p>
