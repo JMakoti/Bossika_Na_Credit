@@ -53,6 +53,8 @@ export default function App() {
               </ProtectedRoute>
             }
             />
+
+            
             
             {/* Default Route */}
             <Route path="/" element={<Navigate to="/login" replace />} />

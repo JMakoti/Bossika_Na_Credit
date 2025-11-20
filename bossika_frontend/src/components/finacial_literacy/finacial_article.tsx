@@ -27,7 +27,9 @@ export default function FinancialArticle() {
           <div className="flex items-center justify-between py-3 sm:h-16">
             <div className="flex-1 min-w-0">
               <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 truncate">
-                <Link to="/dashboard" className="">Bossika Na Credit</Link>
+                <Link to="/dashboard" className="">
+                  Bossika Na Credit
+                </Link>
               </h1>
               <p className="text-xs sm:text-sm text-gray-600 truncate">
                 Welcome back,{" "}
@@ -80,12 +82,24 @@ export default function FinancialArticle() {
         </div>
       </header>
 
-      <div className="flex flex-col items-center justify-center my-10">
-        <h2 className="text-4xl font-bold mb-4">Financial Insights</h2>
-        <p className="text-lg text-gray-600 mb-8 text-center max-w-2xl">
-          Expert analysis and market intelligence to guide your investment
-          decisions
-        </p>
+      <div className="flex flex-col items-start justify-center my-10">
+        <div className="flex justify-between w-full px-9 mb-8">
+        <div>
+          <h2 className="text-4xl font-bold mb-4">Financial Insights</h2>
+          <p className="text-lg text-gray-600 mb-8 text-center max-w-2xl">
+            Expert analysis and market intelligence to guide your investment
+            decisions
+          </p>
+        </div>
+        <div>
+          <Button className="bg-blue-600">
+            <Link to="/literacy/bot" className="flex gap-1 items-center text-white font-medium">
+            Chat Bot
+            </Link>
+            
+            </Button>
+        </div>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-8 w-full p-8">
           {articles.map((article) => (
